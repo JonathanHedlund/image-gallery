@@ -5,7 +5,6 @@ var searchTags = {}
 window.onload = async function(e) {
     if (window.location.pathname == "/") {
         loadImages(pageNumber) 
-        loadImages(pageNumber) 
     }
 
     if (window.location.pathname == "/bookmarks.html") {
@@ -233,7 +232,6 @@ function searchImages(e) {
     searchTags.tags = document.getElementById("searchQuery").value
     document.getElementById("imagesContainer").innerHTML = "";
     loadImages(pageNumber) 
-    loadImages(pageNumber++) 
 }
 
 async function getBookmarkedImages() {
