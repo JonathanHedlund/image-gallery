@@ -314,21 +314,24 @@ async function removeBookmark(e) {
 
     await axios.put(`/api/images/remove-bookmark`, {url: e}, config)
     .then(function (response) {
-        if (response.data && response.data.length > 0) {
-            document.getElementById('bookmarksContainerInner').innerHTML = response.data.map(image => 
-                `<div class="imageSingleContainer" id="${image.imageURL}" tabindex="0"" onclick="removeBookmark('${image.imageURL}')">
-                    <div>
-                        <i class="fa fa-bookmark bookmarkIconSaved"></i>
-                    </div>
-                    
-                    <div class="imageSingleContainerInner">
-                        <div class="flickrImage" style="background-image: url('${image.imageURL}')"></div>
-                    </div>
-                </div>`
-            ).join('')
-        } else {
-            document.getElementById('bookmarksContainer').innerHTML = `<p class="noImagesFound">You removed all your bookmarks! :(</p>`
+        if (window.location.pathname == "/bookmarks.html") {
+            if (response.data && response.data.length > 0) {
+                document.getElementById('bookmarksContainerInner').innerHTML = response.data.map(image => 
+                    `<div class="imageSingleContainer" id="${image.imageURL}" tabindex="0"" onclick="removeBookmark('${image.imageURL}')">
+                        <div>
+                            <i class="fa fa-bookmark bookmarkIconSaved"></i>
+                        </div>
+                        
+                        <div class="imageSingleContainerInner">
+                            <div class="flickrImage" style="background-image: url('${image.imageURL}')"></div>
+                        </div>
+                    </div>`
+                ).join('')
+            } else {
+                    document.getElementById('bookmarksContainer').innerHTML = `<p class="noImagesFound">You removed all your bookmarks! :(</p>`
+            }
         }
+
     })
     .catch(function (error) {
         const message =
