@@ -82,17 +82,16 @@ window.onload = async function(e) {
     }
 }
 
+//Image functions
 if (window.location.pathname == "/") {
-    //Image functions
     window.addEventListener('scroll',() => {
-        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 300) {
             loadImages(pageNumber);
         }
     })
 }
 
 window.addEventListener("click", function(event) {
-    console.log(event.target)
     if (document.getElementById('menuMobileContainer').classList.contains("menuMobileContainerActive")) {
         if (!event.target.matches('.menuMobileActiveComponent')) {
             document.getElementById('menuMobileContainer').classList.add("menuMobileContainer")
@@ -234,6 +233,7 @@ function searchImages(e) {
     searchTags.tags = document.getElementById("searchQuery").value
     document.getElementById("imagesContainer").innerHTML = "";
     loadImages(pageNumber) 
+    loadImages(pageNumber++) 
 }
 
 async function getBookmarkedImages() {
