@@ -5,6 +5,7 @@ var searchTags = {}
 window.onload = async function(e) {
     if (window.location.pathname == "/") {
         loadImages(pageNumber) 
+        loadImages(pageNumber) 
     }
 
     if (window.location.pathname == "/bookmarks.html") {
