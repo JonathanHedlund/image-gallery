@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cool photos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"></link>    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/functions.js"></script>
+</head>
+<body>
+    <header class="headerContainer">
+        <div class="headerContainerInner">
+            <div class="headerLeftContainerMobile" id="headerLeftContainerMobile"></div>
+            <div class="headerLeftContainer" id="headerLeftContainer"></div>
+            <div class="headerRightContainerMobile" id="headerRightContainerMobile"></div>
+            <div class="headerRightContainer" id="headerRightContainer"></div>
+        </div>
+    </header>
+    <div class="menuMobileContainer menuMobileActiveComponent" id="menuMobileContainer">
+        <div class="menuMobileContainerInner menuMobileActiveComponent" id="menuMobileContainerInner">
+
+        </div>
+    </div>
+    <div class="contentContainer" id="contentContainer">
+        <div class="contentContainerInner">
+            <div class="loginSignupContainer">
+                <div class="loginSignupContainerInner">
+                    <h1>Login</h1>
+                    <div class="errorMessageContainer" id="loginErrorContainer">
+                        <div class="errorMessageInner" id="loginError">
+
+                        </div>
+                    </div>
+                    <form onsubmit="event.preventDefault(); loginUser();" class="formContainer">
+                        <div class="formInputContainer">
+                            <label for="emailLogin" class="formLabel">Email</label>
+                            <input type="email" name="emailLogin" id="emailLogin" class="formControl loginInput" required>
+                        </div>
+                        <div class="formInputContainer">
+                            <label for="passwordLogin" class="formLabel">Password</label>
+                            <input type="password" name="passwordLogin" id="passwordLogin" class="formControl loginInput" required>
+                        </div>
+                        <button type="submit" class="btnLarge btnRed loginSignupBtn">Login</button>
+    
+                    </form>
+                    <p class="loginSignupAltAction">
+                        Don't have an account? <a href="/signup.html" class="linkRed">Register here!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

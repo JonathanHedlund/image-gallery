@@ -1,0 +1,507 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    color: #fafafa;
+    background-color: #181818;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.6rem;
+}
+
+/*General CSS styling*/
+
+.formLabel {
+    font-size: 1.1rem;
+    margin-left: 5px;
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.formControl {
+    background-color: #272727;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 0;
+    color: #fafafa;
+    font-size: 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 0;
+    font-size: 1.15rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.13);
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.btnLarge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 0;
+    font-size: 1.15rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.13);
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.btnRed {
+    background-color: #EB2F2F;
+    color: #fafafa;
+}
+
+.btnRed:active {
+    background-color: #a81c1c;
+    color: #fafafa;
+}
+
+.linkRed {
+    color: #EB2F2F;
+}
+
+.linkRed:hover {
+    text-decoration: underline;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 120px 0;
+}
+
+.contentContainerInner {
+    width: 85%;
+    max-width: 1100px;
+}
+
+.errorMessageContainer {
+    display: none;
+    justify-content: center;
+    margin: 20px 0 20px;
+}
+
+.errorMessageInner {
+    background-color: rgb(252, 144, 144);
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 600px;
+}
+
+.showError {
+    display: flex;
+}
+
+/*More specific CSS styling*/
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1100px;
+}
+
+.headerLeftContainer {
+    display: none;
+}
+
+.headerLink {
+    font-size: 1.1rem;
+    margin: 5px 0 0 40px
+}
+
+.headerLink:hover {
+    text-decoration: underline;
+}
+
+.headerRightContainerMobile {
+    display: flex;
+    align-items: center;
+}
+
+.headerRightContainer {
+    display: none;
+}
+
+.loginLink {
+    font-size: 1.1rem;
+    margin-right: 30px;
+}
+
+.loginLink:hover {
+    text-decoration: underline;
+}
+
+.headerMenuIcon {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.menuMobileContainer {
+    top: 0;
+    right: 0;    
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    background-color: rgb(250, 99, 99);
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.295);
+    z-index: 50;
+}
+
+.menuMobileContainerInner {
+    padding: 30px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuMobileContainerActive {
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background-color: rgb(250, 99, 99);
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.63);
+    z-index: 50;
+}
+
+.mobileMenuLoggedInGreeting {
+    font-size: 1.2rem;
+}
+
+.mobileMenuLink {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+.menuMobileContainerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMenuMobileCross {
+    font-size: 1.6rem;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+.mobileSearchHeader {
+    display: none;
+}
+
+.searchImagesContainer {
+    margin-bottom: 40px;
+}
+
+.searchImagesForm {
+    display: flex;
+    justify-content: center;
+}
+
+.searchImagesFormInner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+
+.btnSearchText {
+    display: none;
+    margin-left: 15px;
+}
+
+.searchImagesInput {
+    margin-right: 10px;
+    width: 100%;
+}
+
+.imagesContainer {
+    
+}
+
+.imagesContainerInner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.imageSingleContainer {
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #313131;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.imageSingleContainer:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    
+}
+
+.imageSingleContainerInner {
+    height: 100%;
+    width: 100%;
+}
+
+.imageSingleContainer:active .flickrImage {
+    transform: scale(1.05);
+    opacity: 80%;
+}
+
+.imageSingleContainer:active .bookmarkIcon {
+    display: block;
+    opacity: 100%;
+}
+
+.imageSingleContainer:active {
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.295);
+}
+
+.flickrImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.bookmarkIcon {
+    position: absolute;
+    margin: 25px;
+    font-size: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+    transition: 0.15s;
+}
+
+.bookmarkIconSaved {
+    position: absolute;
+    margin: 25px;
+    font-size: 1.8rem;
+    z-index: 20;
+    color: #a81c1c;
+    transition: 0.15s;
+}
+
+.showBookmark {
+    opacity: 100%;
+    color: #a81c1c;
+}
+
+.removeBookmark {
+    opacity: 0;
+    color: #fff;
+}
+
+.noImagesFound {
+    font-size: 1.2rem;
+}
+
+/*Login and Signup styling*/
+.loginSignupContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 00px;
+}
+
+.loginSignupContainerInner {
+    max-width: 500px;
+    width: 100%;
+}
+
+.formContainer {
+    margin-top: 40px;
+}
+
+.formInputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.loginInput {
+    margin-top: 10px;
+}
+
+.loginSignupBtn {
+    margin: 40px 0 25px;
+    max-width: 500px;
+}
+
+.loginSignupAltAction {
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .imagesContainerInner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .btnRed:hover {
+        background-color: #a81c1c;
+        color: #fafafa;
+    }
+
+    .imageSingleContainer:hover .flickrImage {
+        transform: scale(1.05);
+        opacity: 80%;
+    }
+    
+    .imageSingleContainer:hover .bookmarkIcon {
+        display: block;
+        opacity: 100%;
+    }
+    
+    .imageSingleContainer:hover {
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.295);
+    }
+
+    .bookmarkIcon {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .imagesContainerInner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .headerContainer {
+        margin-bottom: 50px;
+    }
+    
+    .headerLogo {
+        margin-right: 20px;
+    }
+
+    .headerLeftContainerMobile {
+        display: none;
+    }
+    
+    .headerLeftContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .headerRightContainerMobile {
+        display: none;
+    }
+    
+    .headerRightContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobileSearchHeaderMobile {
+        display: none;
+    }
+    
+    .mobileSearchHeader {
+        display: block;
+        text-align: center;
+        font-size: 2.6rem;
+        margin-bottom: 40px;
+    }
+
+    .searchImagesInput {
+        margin-right: 15px;
+    }
+
+    .btnSearchText {
+        display: block;
+    }
+
+    .btnRed:hover {
+        background-color: #a81c1c;
+        color: #fafafa;
+    }
+
+    .imageSingleContainer:hover .flickrImage {
+        transform: scale(1.05);
+        opacity: 80%;
+    }
+    
+    .imageSingleContainer:hover .bookmarkIcon {
+        display: block;
+        opacity: 100%;
+    }
+    
+    .imageSingleContainer:hover {
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.295);
+    }
+
+    .formControl {
+        padding: 15px 20px;
+    }
+
+    .btn {
+        padding: 10px 20px 10px;
+    }
+
+    .menuMobileContainerActive {
+        display: none;
+    }
+
+    .noImagesFound {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .imagesContainerInner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
