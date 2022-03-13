@@ -195,8 +195,7 @@ const bookmarkImage = asyncHandler(async (req, res) => {
 
 		res.status(200).json(updatedBookmarks.bookmarkedImages)
 	} else {
-		res.status(40)
-		throw new Error("Image is already bookmarked")
+		res.status(200).json("Image is already bookmarked")
 	}
 })
 

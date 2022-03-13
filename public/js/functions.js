@@ -76,7 +76,7 @@ if (window.location.pathname == "/") {
 	window.addEventListener("scroll", () => {
 		if (
 			window.scrollY + window.innerHeight >=
-			document.documentElement.scrollHeight - 300
+			document.documentElement.scrollHeight - 500
 		) {
 			loadImages(pageNumber)
 		}
